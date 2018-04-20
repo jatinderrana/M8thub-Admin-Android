@@ -18,4 +18,5 @@
     <color name="opacityblackcolor">#73000000</color>
     <color name="tabbartextcolor">#929292</color>
     <color name="tabbartextcolorselected">#000000</color>
+    <color name="red">#FF0000</color>
 </resources>

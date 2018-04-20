@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.lifelineconnect.m8thubadmin.Utils.CustomViewPager;
 import com.lifelineconnect.m8thubadmin.Utils.TestContent;
 import com.lifelineconnect.m8thubadmin.fragments.Channel;
+import com.lifelineconnect.m8thubadmin.fragments.SearchChannelFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,10 +36,11 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                 //    mTextMessage.setText(R.string.title_home);
+                    mViewPager.setCurrentItem(0);
                     return true;
-//                case R.id.navigation_dashboard:
-//                    mTextMessage.setText(R.string.title_dashboard);
-//                    return true;
+                case R.id.navigation_dashboard:
+                    mViewPager.setCurrentItem(1);
+                    return true;
 //                case R.id.navigation_notifications:
 //                    mTextMessage.setText(R.string.title_notifications);
 //                    return true;
@@ -84,7 +86,8 @@ public class MainActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager)
     {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new Channel(), "Channel");
+        adapter.addFragment(new Channel(), "Broadcast");
+        adapter.addFragment(new SearchChannelFragment(), "Channel");
         viewPager.setAdapter(adapter);
 
     }

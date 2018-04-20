@@ -28,8 +28,6 @@ import java.util.HashMap;
 
 public class ScreenFirstFragment extends Fragment implements View.OnClickListener {
     LinearLayout buttonlogin,buttonregister;
-    public static ArrayList<HashMap<String,Object>> MusicList  = new ArrayList<>();
-    public static ArrayList<HashMap<String,Object>> ContactList  = new ArrayList<>();
     public static String TAG = "ScreenFirstFragment";
     int PERMISSION_ALL = 1;
 
@@ -48,25 +46,8 @@ public class ScreenFirstFragment extends Fragment implements View.OnClickListene
                 Manifest.permission.READ_EXTERNAL_STORAGE,
                 Manifest.permission.CAMERA,
                 Manifest.permission.INTERNET,
-                Manifest.permission.RECORD_AUDIO,
                 Manifest.permission.ACCESS_WIFI_STATE,
-                Manifest.permission.ACCESS_NETWORK_STATE,
-                Manifest.permission.CHANGE_CONFIGURATION,
-                Manifest.permission.RECEIVE_BOOT_COMPLETED,
-                Manifest.permission.VIBRATE,
-                Manifest.permission.PROCESS_OUTGOING_CALLS,
-                Manifest.permission.MODIFY_AUDIO_SETTINGS,
-                Manifest.permission.WRITE_SETTINGS,
-                Manifest.permission.READ_PHONE_STATE,
-                Manifest.permission.WAKE_LOCK,
-                Manifest.permission.VIBRATE,
-                Manifest.permission.READ_LOGS,
-                Manifest.permission.READ_CONTACTS,
-                Manifest.permission.CALL_PHONE,
-                Manifest.permission.SEND_SMS,
-                Manifest.permission.WRITE_CONTACTS,
-                Manifest.permission.ACCESS_FINE_LOCATION,
-                Manifest.permission.ACCESS_COARSE_LOCATION};
+                Manifest.permission.ACCESS_NETWORK_STATE};
 
         if(!hasPermissions(getActivity(), PERMISSIONS))
         {

@@ -28,6 +28,8 @@ public class Settings {
     public static String currentimage = "";
 
     public static int IMAGE_SIZE = 600;
+    public static String  MainUrl = "https://channels-api.m8thub.com/api/";
+    public static String  UserChannelUrl = MainUrl+"channels";
     public interface Prefs {
 
 
