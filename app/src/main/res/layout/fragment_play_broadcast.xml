@@ -1,0 +1,299 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:fitsSystemWindows="true">
+
+
+
+        <RelativeLayout
+            android:background="?android:colorBackground"
+            android:orientation="horizontal"
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            >
+            <LinearLayout
+                android:id="@+id/btn_back"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageView
+
+                    android:layout_gravity="center|left"
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+
+                    android:background="@mipmap/back" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/timeline"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/_16jdp" />
+            </LinearLayout>
+            <LinearLayout
+
+                android:visibility="gone"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight=".10"
+                android:layout_height="match_parent">
+                <com.lifelineconnect.m8thubadmin.Utils.RoundedImageView
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center"
+                    android:layout_alignRight="@+id/btn_search"
+
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center|left"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tv_Ch_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textColor="@color/green"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/fragment_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Broadcast"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:textSize="12dp"
+
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center|right"
+                android:id="@+id/btn_menu"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_5jdp"
+                android:layout_gravity="center|right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/zoomer"
+                    android:rotation="90"
+                    android:layout_gravity="center"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/zoom_out"
+                    android:background="@color/opacityblackcolor"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+        <!-- TODO: Update blank fragment layout -->
+        <RelativeLayout
+            android:background="@color/colorgrey"
+            android:layout_marginTop="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/rlMAin"
+
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.lifelineconnect.m8thubadmin.Utils.ObservableVideoView
+
+                    android:layout_centerInParent="true"
+                    android:id="@+id/vv_broadcast"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentBottom="true">
+                    <include layout="@layout/views_like_share_comments_row"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_above="@+id/rec_cmnt_list"
+                        />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:visibility="gone"
+                        android:id="@+id/rec_cmnt_list"
+                        android:layout_above="@+id/ll_write_msg"
+                        android:layout_width="match_parent"
+                        android:scrollbars="vertical"
+                        android:layout_height="100dp"></android.support.v7.widget.RecyclerView>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/ll_write_msg"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:background="@color/colorAccent"
+                        android:weightSum="1"
+                        >
+                        <LinearLayout
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight=".15"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:background="@mipmap/zoom_in"
+                                />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/et_write_comment"
+                            android:textSize="@dimen/_14jdp"
+                            android:hint="Write a new message"
+                            android:layout_width="0dp"
+                            android:layout_weight=".65"
+                            android:layout_height="40dp"
+                            android:gravity="center|left"
+                            android:padding="5dp"
+                            android:layout_gravity="center"
+
+                            android:background="@drawable/rounded_border_white"
+                            />
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight=".2"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/btn_sent_comment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:textColor="@color/white"
+                                android:text=" Send "
+                                android:textSize="14dp"
+                                android:gravity="center"
+                                android:padding="7dp"
+                                android:background="@drawable/rounded_border"
+
+
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/aboveframe"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:background="@color/black"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/_16jdp"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/closeframe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_gravity="right"
+                android:drawableRight="@mipmap/cross_video"
+                android:gravity="right"
+                android:textSize="@dimen/_20jdp"
+                android:text="@string/close"/>
+
+            <ImageView
+                android:id="@+id/poster"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10jdp"
+                android:src="@mipmap/channel"
+                android:scaleType="fitXY"
+                android:layout_height="@dimen/_300jdp" />
+
+            <TextView
+                android:id="@+id/detail1"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_16jdp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16jdp"
+                android:text="@string/save"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/detail2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16jdp"
+                android:text="@string/save"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/detail3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16jdp"
+                android:text="@string/save"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/detail4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16jdp"
+                android:text="@string/save"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/watchbutton"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_20jdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16jdp"
+                android:text="@string/watch"
+                android:background="@drawable/rounded_white_stroke"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+
+

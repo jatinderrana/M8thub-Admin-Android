@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rl"
+        android:layout_margin="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_260jdp">
+
+        <ImageView
+
+            android:id="@+id/iv_poster"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_260jdp"
+            android:background="@color/opacityblackcolor"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:background="@color/opacityblackcolor"
+            >
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:visibility="visible"
+                android:layout_width="0dp"
+                android:layout_weight=".15"
+                android:layout_height="wrap_content">
+                <com.lifelineconnect.m8thubadmin.Utils.RoundedImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/avatar"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_margin="@dimen/_6jdp"
+                android:layout_width="0dp"
+                android:layout_weight=".7"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:textColor="@color/white"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic"
+                    android:textSize="@dimen/_13jdp"
+
+                    />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_two"
+                        android:textColor="@color/white"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_15jdp"
+                        />
+
+                    <!--<TextView-->
+                        <!--android:textColor="@color/red"-->
+                        <!--android:text="  LIVE"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textSize="14dp"-->
+                        <!--/>-->
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_three"
+                    android:textColor="@color/white"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13jdp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_menu"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight=".15"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:background="@mipmap/chat_menu"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/views_like_share_comments_row"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+

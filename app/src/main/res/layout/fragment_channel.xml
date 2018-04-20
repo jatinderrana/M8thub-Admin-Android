@@ -1,0 +1,118 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/channel_con"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:background="?android:colorBackground"
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        >
+
+        <TextView
+            android:id="@+id/fragment_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Timeline"
+            android:textColor="@color/green"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textSize="18dp"
+            />
+
+
+
+    </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:layout_marginTop="60.5dp"
+            />
+        <LinearLayout
+            android:layout_marginTop="61.5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rl_search"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:background="@drawable/rounded_border"
+                >
+                <EditText
+                    android:layout_marginTop="9dp"
+                    android:hint="Search"
+                    android:paddingLeft="45dp"
+                    android:paddingRight="5dp"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:paddingTop="5dp"
+                    android:layout_marginBottom="9dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/rounded_border_white"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </android.support.v7.widget.RecyclerView>
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+
+        </LinearLayout>
+
+
+
+
+        <TextView
+            android:text="No channel(s) found."
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tv_emptyMsg"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textSize="16dp"
+            android:visibility="gone"
+            />
+
+
+
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>

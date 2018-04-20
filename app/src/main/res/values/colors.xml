@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- This is the color of the Toolbar -->
+    <color name="colorPrimary">#f9f9f9</color>
+    <!-- This is the color of the Status bar -->
+    <color name="colorPrimaryDark">#929292</color>
+    <!-- The Color of the Status bar -->
+    <color name="colorAccent">#929292</color>
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="green">#709782</color>
+    <color name="black">#000000</color>
+    <color name="linescolor">#cccccc</color>
+    <color name="textcolor">#c7c7cd</color>
+    <color name="blue">#4389df</color>
+    <color name="colorgrey">#a44b4949</color>
+    <color name="opacityblackcolor">#73000000</color>
+    <color name="tabbartextcolor">#929292</color>
+    <color name="tabbartextcolorselected">#000000</color>
+</resources>

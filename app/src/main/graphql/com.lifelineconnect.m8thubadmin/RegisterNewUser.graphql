@@ -1,0 +1,21 @@
+mutation SignUpUser($firstname: String!
+	$lastname: String!
+  $email: String!
+  $password: String!
+  $mobile: String!
+)
+{
+    signUp(input: {firstName: $firstname
+        lastName: $lastname
+        email: $email
+        password: $password
+        mobile: $mobile
+       })
+  	{
+      id
+      jid
+      isAdmin
+      isActive
+    }
+
+}
