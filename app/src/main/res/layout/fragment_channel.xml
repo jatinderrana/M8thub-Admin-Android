@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:id="@+id/channel_con"
+
     android:fitsSystemWindows="true"
     android:background="@color/white"
     android:layout_height="match_parent">
@@ -17,6 +18,7 @@
         android:layout_height="wrap_content" />
     <RelativeLayout
         android:layout_width="match_parent"
+         android:layout_marginBottom="@dimen/_55jdp"
         android:layout_height="match_parent">
     <RelativeLayout
         android:background="?android:colorBackground"
@@ -88,7 +90,6 @@
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recycleView"
 
-                    android:layout_marginBottom="@dimen/_55jdp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                 </android.support.v7.widget.RecyclerView>
